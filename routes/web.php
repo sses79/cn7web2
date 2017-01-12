@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::get('/timeline', 'FrontEndController@showTimeline');
+Route::get('/portfolio', 'FrontEndController@showPortfolio');
+Route::get('/feature', 'FrontEndController@showFeature');

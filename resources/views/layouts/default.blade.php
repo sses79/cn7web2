@@ -54,7 +54,7 @@
 </header>
 <!-- //Header Section Start -->
 <!-- Notifications -->
-@include('notifications')
+@include('partials.notifications')
 <!-- Content -->
 @yield('content')
 
@@ -140,7 +140,7 @@
 <!-- page level js Start -->
 @yield('footer_scripts')
 <!-- new flash script -->
-@include('layouts/flash')
+@include('partials/flash')
 <!-- //page level js End -->
 </body>
 
