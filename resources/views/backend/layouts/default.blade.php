@@ -66,12 +66,12 @@
                             <span class="mm-text ">Dashboard</span>
                         </a>
                     </li>
-                    {{--<li {{ (Request::is('backend/users') ? 'class=active' : '') }}>--}}
-                        {{--<a href="{{ URL::to('backend/users') }}">--}}
-                            {{--<i class="menu-icon fa fa-fw fa-users"></i>--}}
-                            {{--<span class="mm-text ">Users</span>--}}
-                        {{--</a>--}}
-                    {{--</li>--}}
+                    <li {{ (Request::is('backend/users') ? 'class=active' : '') }}>
+                        <a href="{{ URL::to('backend/users') }}">
+                            <i class="menu-icon fa fa-fw fa-users"></i>
+                            <span class="mm-text ">Users</span>
+                        </a>
+                    </li>
                     {{--<li class="menu-dropdown  {!! (( Request::is('backend/news') ||  Request::is('backend/news/create')) || Request::is('backend/news/*')  ? 'active' : '') !!}">--}}
                         {{--<a href="#">--}}
                             {{--<i class="menu-icon fa fa-fw fa-newspaper-o"></i>--}}

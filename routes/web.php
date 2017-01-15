@@ -24,13 +24,12 @@ Route::get('/portfolio', 'FrontEndController@showPortfolio');
 Route::get('/feature', 'FrontEndController@showFeature');
 
 Route::group(array('prefix' => 'backend', 'middleware' => 'auth'), function () {
-//Route::group(array('prefix' => 'backend'), function () {
     Route::get('/', array('as' => 'dashboard', 'uses' => 'BackendController@showDashboard'));
 
-//# Users
-//    Route::group(array('prefix' => 'users'), function () {
-//        Route::get('/', array('as' => 'users', 'uses' => 'UsersController@getIndex'));
-//    });
+# Users
+    Route::group(array('prefix' => 'users'), function () {
+        Route::get('/', array('as' => 'users', 'uses' => 'UserController@getIndex'));
+    });
 //# News
 //    Route::group(array('prefix' => 'news'), function () {
 //        Route::get('/', array('as' => 'newses', 'uses' => 'NewsController@getIndex'));
