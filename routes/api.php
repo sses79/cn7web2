@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Phone;
 use Illuminate\Http\Request;
 
 /*
@@ -20,4 +21,9 @@ use Illuminate\Http\Request;
 Route::get('/user', function (Request $request) {
     $request_user = $request->user();
     return response()->json($request_user);
+})->middleware(['cors','auth:api']);
+
+Route::get('/phones', function () {
+    $phones = Phone::all();
+    return $phones;
 })->middleware(['cors','auth:api']);
